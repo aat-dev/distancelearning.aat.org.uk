@@ -1,0 +1,38 @@
+.resources {
+  text-align: center;
+  //background: $aat-bgd-primary;
+
+  &__contain {
+    display: inline-block;
+    padding: 0 15px;
+
+    .resources__book {
+      padding-top: 40px;
+
+      .resources__cta {
+        //@extend .col-md-6;
+        padding-top: 40px;
+
+        //border: 1px solid $aat-border-secondary;
+        //border-radius: 6px;
+        //padding: 12px;
+        text-align: center;
+        //background: #fff;
+      }
+    }
+
+    .resources__cta:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &__contain {
+      padding: 0;
+
+      h2 {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Global and custom links
+a {
+  color: $aat-primary;
+  cursor: pointer;
+
+  &:active {
+    color: $aat-primary;
+  }
+
+  &:hover {
+    color: $aat-tertiary;
+  }
+
+  &:visited {
+    color: $aat-primary;
+  }
+}

@@ -1,0 +1,93 @@
+// Footer Section
+.footer {
+
+  // Footer Social Icons
+  .footer-social {
+
+    background-color: #6d6d6d;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  // Footer Links
+  .footer-main {
+
+    background-color: $gray-dark;
+    padding: 35px 0;
+
+    @extend .row;
+
+    .footer-main__logo {
+      @extend .col-md-6;
+      text-align: center;
+
+      img {
+        width: 120px;
+        float: none;
+      }
+
+    }
+
+    .footer-main__address {
+      @extend .col-md-6;
+      color: #fff;
+      text-align: center;
+      font-size: .8em;
+      padding-top: 15px;
+    }
+
+  }
+
+  // Footer Terms at page bottom
+
+  .footer-terms {
+
+    @extend .row;
+
+    background-color: #2f2f2f;
+    text-align: center;
+    padding: 20px;
+    font-size: small;
+
+    .footer-terms__term-links {
+
+      @extend .col-md-6;
+
+      ul {
+
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+          //vertical-align: middle;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+              color: $aat-secondary;
+            }
+          }
+        }
+      }
+
+    }
+
+    .footer-terms__copyright {
+      @extend .col-md-6;
+      color: #fff;
+    }
+
+  }
+
+  // BREAKPOINTS //
+
+  @media (min-width: $breakpoint-desktop) {
+  }
+
+}

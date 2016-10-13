@@ -1,0 +1,32 @@
+@import "vendor/bootstrap";
+@import "variables";
+@import "fonts";
+@import "base/typography";
+@import "base/links";
+@import "base/media";
+@import "layout/layout";
+@import "components/header";
+@import "components/buttons";
+@import "components/hero";
+@import "components/success-story";
+@import "components/actions";
+@import "components/considerations";
+@import "components/resources";
+@import "components/social";
+@import "components/footer";
+
+html, body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: $aat-text;
+  // Fix mobile right hand gap issue
+  // stackoverflow.com/questions/16704893/twitter-bootstrap-white-gap-on-right-side-of-page
+  overflow-x: hidden;
+
+  // Fix Momentum Scrolling on iOS Overflow Elements
+  // css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+  //  overflow-y: scroll; /* has to be scroll, not auto */
+  //  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,75 @@
+.header--cta-button, .hero_message__content--cta-button, .actions-cta__button, .resources__cta--button {
+  @extend .btn;
+  @extend .btn-success;
+
+  color: #fff !important;
+  background-color: $aat-primary !important;
+  border-color: $aat-btn-border !important;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: .5px;
+  white-space: normal;
+
+  @media (min-width: $breakpoint-desktop) {
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background-color: $aat-btn-bgd !important;
+    border-color: $aat-btn-border !important;
+  }
+
+  &:visited {
+    color: #fff !important;
+  }
+}
+
+.hero_message__content--cta-button {
+  color: $aat-primary !important;
+  background: #fff !important;
+  display: inline-block;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 100;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: normal;
+  padding: 9px 22px;
+  line-height: 1.428571429;
+  box-shadow: 0 2px 0 0 $aat-btn-border-secondary;
+
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 3px;
+
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 3px;
+
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 3px;
+
+  &:hover {
+    background-color: $aat-primary-10 !important;
+    border-color: $aat-btn-border !important;
+  }
+
+  &:visited {
+    color: $aat-primary !important;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 38px;
+  }
+}
+
+.hero_message__content--cta-button:hover,
+.hero_message__content--cta-button:active,
+.hero_message__content--cta-button:visited {
+  text-decoration: none;
+  //    Give buttons pressed down effect
+  position: relative;
+  top: 1px;
+  box-shadow: none;
+}

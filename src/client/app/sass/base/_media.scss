@@ -1,0 +1,33 @@
+.video__content {
+  height: 0;
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  margin-top: 15px;
+
+  iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+  }
+
+}
+
+//Embedded Twitter timeline
+
+#twitter-widget-0 {
+  height: 600px !important;
+  width: 86% !important;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 60% !important;
+  }
+}
+
+

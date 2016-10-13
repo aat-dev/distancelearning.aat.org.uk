@@ -1,0 +1,56 @@
+.actions {
+  background: $aat-primary-60;
+
+  &__contain {
+    margin: auto;
+    max-width: 45em;
+    padding: 0 10px;
+
+    .panel-group {
+      .panel-default {
+        border-color: $aat-primary;
+
+        .panel-heading {
+          background-color: $aat-primary-90;
+
+          .panel-title {
+            padding-left: 30px;
+
+            a {
+              font-size: 26px;
+              color: #fff;
+              font-family: 'Open Sans', Arial, sans-serif;
+            }
+          }
+        }
+
+        .panel-collapse {
+          .panel-body {
+            padding: 30px 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &__contain {
+      padding: 0;
+
+      .panel-group {
+        .panel-default {
+          .panel-heading {
+            .panel-title {
+
+              a {
+                font-size: 44px;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
