@@ -6,74 +6,100 @@ section.success-story {
   }
 }
 
-
 .success-story {
   position: relative;
   width: 100%;
-  height: 620px;
+  //height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -300px;
   overflow: hidden;
-  //background-image: url("/assets/img/Sarah-Williams-success-story.jpg");
-  background-image: url("http://wireframes.aws.aat.org.uk/prototypes/campaigns/dl/build/assets/img/Sarah-Williams-success-story.jpg");
-
-  &:before {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.60)), color-stop(100%, rgba(0, 0, 0, 0.80))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.80) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* W3C */
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52000000', endColorstr='#82000000', GradientType=0); /* IE6-9 */
-
-    @media (min-width: $breakpoint-desktop) {
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.32)), color-stop(100%, rgba(0, 0, 0, 0.51))); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.51) 100%); /* Chrome10+,Safari5.1+ */
-    }
-
-  }
+  background-color: $aat-bgd-secondary;
 
   &__contain {
     .success-story__text {
       @extend .col-md-4;
       @extend .col-md-offset-6;
+      padding: 0 20px;
 
-      h2 {
-        color: #ffffff;
-      }
-
-      p {
-        color: #ffffff;
-        font-size: 14px;
-        font-style: italic;
+      h2, p {
+        text-align: center;
       }
 
       cite {
-        color: #ffffff;
-        font-size: 14px;
         font-style: normal;
+        font-size: 13px;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+
+  @media (min-width: $breakpoint-tablet-lg) {
+    height: 100%;
+
+    &__contain {
+      .success-story__text {
+        max-width: 680px;
+
+        h2, p {
+          text-align: left;
+        }
+
+        cite {
+          font-style: normal;
+          font-size: 13px;
+          text-align: left;
+          display: block;
+        }
       }
     }
   }
 
   @media (min-width: $breakpoint-desktop) {
-    height: 560px;
+    height: 780px;
     background-position: top center;
+    background-size: cover;
+
+    //background-image: url("/assets/img/Sarah-Williams-success-story.jpg");
+    background-image: url("http://wireframes.aws.aat.org.uk/prototypes/campaigns/dl/build/assets/img/Sarah-Williams-success-story.jpg");
+
+    &:before {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.60)), color-stop(100%, rgba(0, 0, 0, 0.80))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.80) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* IE10+ */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.80) 100%); /* W3C */
+      -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#52000000', endColorstr='#82000000', GradientType=0); /* IE6-9 */
+
+      @media (min-width: $breakpoint-desktop) {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.32)), color-stop(100%, rgba(0, 0, 0, 0.51))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.51) 100%); /* Chrome10+,Safari5.1+ */
+      }
+
+    }
 
     &__contain {
       .success-story__text {
-        p {
-          font-size: 18px;
+        h2, h3, p, cite {
+          text-align: left;
+          color: #fff;
         }
+
       }
     }
+  }
+
+  @media (min-width: $breakpoint-desktop-wide) {
+    height: 100%;
   }
 }
