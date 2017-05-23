@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
 
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW, NOARCHIVE">
+    <!--<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW, NOARCHIVE">-->
 
     <title>Distance learning with AAT, the professional body for
         accounting technicians</title>
@@ -51,6 +51,66 @@
 })(window,document,'script','dataLayer','GTM-M4NM68');</script>
 <!-- End Google Tag Manager -->
 
+
+<script>
+  window.onload = function () {
+    let settings = {
+      "showButton": true,
+      "department": "I am interested in studying AAT"
+    };
+
+
+    init = () => {
+      window.$zopim.livechat.setOnConnected(() => toggleLivechat(settings));
+      window.$zopim.livechat.setOnStatus(() => toggleLivechat(settings));
+      window.$zopim.livechat.window.onHide(() => showButton);
+    };
+
+    toggleLivechat = (settings) => {
+      if (window.$zopim && window.$zopim.livechat) {
+        if (window.$zopim.livechat.isChatting()) {
+
+          window.$zopim.livechat.button.show();
+        } else if (typeof (settings) !== 'undefined' && settings.department !== '') {
+
+          if (settings.department && window.$zopim.livechat.departments) {
+            window.$zopim.livechat.departments.setVisitorDepartment(settings.department);
+            window.$zopim.livechat.departments.filter(settings.department);
+            if ((settings.showButton && window.$zopim.livechat.departments.getDepartment(settings.department) &&
+              window.$zopim.livechat.departments.getDepartment(settings.department).status == 'online')) {
+              window.$zopim.livechat.button.show();
+            }
+            else {
+              window.$zopim.livechat.hideAll();
+            }
+          }
+        }
+        else {
+          window.$zopim.livechat.hideAll();
+        }
+      }
+    }
+
+    showButton = () => {
+      window.$zopim.livechat.button.show();
+    }
+
+    init();
+  };
+</script>
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+  window.$zopim || (function (d, s) {
+    var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+      d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+      z.set.
+      _.push(o)
+    }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+    $.src = "https://v2.zopim.com/?2np37CW11EyYu8ZTmwMenXdCbM6vt0j1"; z.t = +new Date; $.
+      type = "text/javascript"; e.parentNode.insertBefore($, e)
+  })(document, "script");
+</script>
+<!--End of Zendesk Chat Script-->
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
